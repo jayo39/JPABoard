@@ -3,7 +3,7 @@
 
 # \uC11C\uBC84 \uD3EC\uD2B8 \uBC88\uD638
 server:
-  port: 8093
+  port: 80
 
 # \uCF58\uC194 ANSI \uC0C9\uC0C1
 spring:
