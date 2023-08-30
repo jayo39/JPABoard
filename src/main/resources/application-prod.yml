@@ -1,22 +1,18 @@
 # application.properties \uACF5\uC2DD reference
 # https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 
-# \uC11C\uBC84 \uD3EC\uD2B8 \uBC88\uD638
 server:
   port: 80
 
-# \uCF58\uC194 ANSI \uC0C9\uC0C1
 spring:
   output:
     ansi:
       enabled: always
 
-# ThymeLeaf \uC124\uC815
   thymeleaf:
     cache: false
     prefix: classpath:templates/views/
 
-# datasource \uC124\uC815 MySQL \uB4F1 spring-jdbc \uC0AC\uC6A9\uC2DC \uC544\uB798 \uC815\uBCF4 \uC5C6\uC73C\uBA74 \uC11C\uBC84\uAC00\uB3D9 \uC5D0\uB7EC
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${rds.hostname}:${rds.port}/${rds.db.name}?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
@@ -28,16 +24,11 @@ spring:
     hibernate:
       ddl-auto: none
 
-# \uAC01\uC885 \uC124\uC815\uAC12\uB4E4\uC744 \uC784\uC758\uB85C \uC124\uC815\uD55C\uB4A4 @Value \uB85C \uC124\uC815\uAC12\uC744 \uC8FC\uC785\uBC1B\uC544 \uC0AC\uC6A9 \uAC00\uB2A5
 
-# \uD398\uC774\uC9D5 \uAD00\uB828 \uC138\uD305\uAC12
-# \uAE30\uBCF8 write_pages \uAC12. \uD55C [\uD398\uC774\uC9D5] \uB2F9 \uBA87\uAC1C\uC758 \uD398\uC774\uC9C0\uB97C \uD45C\uC2DC
 app:
   pagination:
     write_pages: 10
-    # \uAE30\uBCF8 page_rows \uAC12. \uD55C '\uD398\uC774\uC9C0'\uC5D0 \uBA87\uAC1C\uC758 \uAE00\uC744 \uB9AC\uC2A4\uD2B8 \uD560\uAC83\uC778\uAC00?
     page_rows: 10
 
-#\uD30C\uC77C \uC5C5\uB85C\uB4DC \uACBD\uB85C
   upload:
     path: upload
